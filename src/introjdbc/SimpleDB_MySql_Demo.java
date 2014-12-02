@@ -33,6 +33,12 @@ public class SimpleDB_MySql_Demo {
 		   System.exit( 1 );  // terminate program
 		}
                 
+                ///  above is in Factory object +  reading properties file
+                ///  above is in Factory object +  reading properties file
+                ///  above is in Factory object +  reading properties file
+                ///  above is in Factory object +  reading properties file
+                
+                
 		Statement stmt = null;
 		ResultSet rs = null;
                 
@@ -40,7 +46,7 @@ public class SimpleDB_MySql_Demo {
                 // Do a Query
                 //=======================================
 
-                String sql = "SELECT * FROM actor ORDER BY last_name";
+                String sql = "SELECT * FROM actor ORDER BY actor_id";
 
 		try {
 			stmt = db.conn.createStatement();
@@ -66,7 +72,7 @@ public class SimpleDB_MySql_Demo {
                 //=======================================
                         
                         int recId = 200; // pick an existing id from your search results
-                        sql = "UPDATE actor SET first_name = 'Bob', last_name = 'Smith'"
+                        sql = "UPDATE actor SET first_name = 'Peter', last_name = 'Pistol'"
                                 + " WHERE actor_id = " + recId;
                         
                         // Notice that we use "excuteUpdate" for any write operations
